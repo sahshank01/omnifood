@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Lighthouse
+
+# Controls when the workflow will run
+on:
+  create
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Lighthouse
+      uses: foo-software/lighthouse-check-action@master
+      with:
+        urls: 'https://www.foo.software,https://www.google.com'
